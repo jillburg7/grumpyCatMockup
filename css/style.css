@@ -1,0 +1,111 @@
+body {
+  width: 80%; 
+  margin: 0 auto;
+  font-family: 'helvetica neue',helvetica,arial sans;
+}
+
+/* banner */
+
+.banner {
+  background-image: url(../img/banner.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #FFF;
+  clear: both;
+}
+
+.banner h1 {
+  margin: 0;
+}
+
+/* nav */
+
+.nav {
+  clear: both;
+  padding: 0 20px;
+}
+
+.nav-left {
+  float: left;
+  margin: 0;
+}
+.nav-right {
+  float: right;
+}
+
+.nav-list-item {
+  display: inline;
+  padding: 0 4px;
+}
+
+.clearfix:after {
+  content: "."; 
+  display: block; 
+  height: 0; 
+  clear: both; 
+  visibility: hidden; 
+}
+.clearfix {
+    display: inline-block;
+}
+.clearfix {
+    display: block;
+}
+
+h2 {
+  font-weight: normal;
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+/* content section */
+
+.content-text {
+  text-align: center;
+  margin: 50px 0;
+}
+
+.thumbnail {
+  background-image: url(../img/grumpy1.jpg);
+  display: inline-block;
+  color: #FFF;
+}
+
+.content-feed {
+  /*display: -webkit-inline-box;*/
+  margin: 50px 0;
+  display: inline-block;
+}
+.feed-left {
+  /*display: inline;*/
+}
+.feed-right {
+  /*padding-left: 20px;*/
+}
+
+/* 
+ *   columns
+ */
+
+/* small row */
+.col-sm-12 {
+
+}
+
+/* large quarter */
+.col-lg-3 {
+  display: inline-block;
+  padding: 0px 20px;
+}
