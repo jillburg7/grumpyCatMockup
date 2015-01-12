@@ -1,7 +1,55 @@
 body {
-  margin: 0;
-  font-family: 'helvetica neue',helvetica,arial sans;
-  font-weight: normal;
+	margin: 0;
+	font-family: 'helvetica neue', helvetica, arial sans;
+	font-weight: normal;
+}
+
+/*
+ *****************
+ *      NAV      *
+ *****************
+*/
+
+.nav {
+	margin: 0 auto;
+	clear: both;
+	padding: 0 3%;
+}
+
+.nav-left {
+	margin: 0;
+}
+
+.page-name {
+	font-size: 2.5em;
+	font-weight: normal;
+	margin: 0;
+}
+
+nav {
+	overflow: hidden;
+}
+
+.nav-right {
+	margin: 10px auto;
+}
+
+.nav-list-item {
+	display: inline;
+	padding: 0 4% 0 0;
+}
+
+ul {
+	padding: 0;
+}
+
+li {
+	list-style-type: none;
+}
+
+a {
+	text-decoration: none;
+	color: #000000;
 }
 
 
@@ -12,71 +60,22 @@ body {
 */
 
 .banner {
-  background-image: url(../img/banner.jpg);
-  background-repeat: no-repeat;
-  height: 500px;
-  color: #FFF;
-  width: 100%;
-  clear: both;
-  position: relative;
+	position: relative;
 }
 
-.banner h1 {
-  margin: 0;
-  position: absolute;
-  top: 15%;
-  left: 13%;
-  font-size: 2.85em;
-  line-height: 1.25;
+.banner img {
+	width: 100%;
 }
 
-
-/*
- *****************
- *      NAV      *
- *****************
-*/
-
-.nav {
-  width: 80%; 
-  margin: 0 auto;
-  clear: both;
-  padding: 0 36px;
+.banner-text {
+	position: absolute;
+	top: 5%;
+	left: 5%;
+	margin: 0 auto;
+	color: #FFF;
+	font-size: 1.3em;
+	line-height: 1.25;
 }
-
-.nav-left {
-  float: left;
-  margin: 20px 0;
-}
-.page-name h2 {
-  font-size: 2.5em;
-  font-weight: normal;
-  margin: 0;
-}
-
-.nav-right {
-  float: right;
-  margin: 40px 0 0 0;
-}
-
-.nav-list-item {
-  display: inline;
-  padding: 0 4px;
-}
-
-ul {
-  padding: 0;
-}
-
-li {
-  list-style-type: none;
-}
-
-a {
-  text-decoration: none;
-  color: #000000;
-}
-
 
 /*
  *******************
@@ -85,58 +84,66 @@ a {
 */
 
 .content {
-  position: relative;
+	margin: 0 auto;
+	clear: both;
+	padding: 0 3%;
+	position: relative;
 }
-
 .content-text {
-  text-align: center;
-  margin: 50px 0;
+	text-align: center;
+	margin: 20px 0 40px 0;
 }
-
 h2 {
-  font-size: 2.2em;
-  font-weight: normal;
-  margin: 0;
+	font-weight: normal;
+	margin: 0;
 }
-
 .thumbnail {
-  background-image: url(../img/grumpy1.jpg) ;
-  display: inline-block;
-  color: #FFF;
-  width: 225px;
-  height: 225px;
-  position: relative;
+	background-image: url(../img/grumpy1.jpg) ;
+	display: inline-block;
+	color: #FFF;
+	width: 225px;
+	height: 225px;
+	position: relative;
 }
 .thumbnail h3 {
-  background: rgba(0,0,0, 0.5);
-  position: absolute;
-  top: 4px;
-  left: 4px;
-  width: 96%;
-  height: 56%;
-  margin: auto;
-  padding-top: 90px;
-  /*padding-bottom: 90px;*/
+	background: rgba(0,0,0, 0.5);
+	position: absolute;
+	top: 4px;
+	left: 4px;
+	width: 96%;
+	height: 56%;
+	margin: auto;
+	padding-top: 90px;
+	/*padding-bottom: 90px;*/
 }
 
-.content-feed {
-  width: 80%; 
-  margin: 0 auto;
-  clear: both;
-  /*display: -webkit-inline-box;*/
-  /*margin: 50px 0;*/
-  display: inline-block;
-  position: relative;
+
+/*
+ *******************
+ *		NEWS FEED		 *
+ *******************
+*/
+
+.news-feed {
+	margin: 0 auto;
+	clear: both;
+	padding: 0 3%;
+	position: relative;
 }
+
+.news-feed-group {
+	margin: 40px auto;
+}
+
 .feed-left {
-  /*display: inline;*/
-  /*position: absolute;*/
-  clear: both;
-  float: left;
+	position: relative;
+	clear: both;
+	float: left;
+}
+.feed-left img  {
 }
 .feed-right {
-  /*padding-left: 20px;*/
-  /*float: inherit;*/
+ overflow: hidden; 
 }
 
 
@@ -146,10 +153,38 @@ h2 {
  ****************
  */
 
-.footer {
-overflow: hidden;
+footer {
+	background-color: #414141;
 }
 
+.footer-menus {
+	width: 80%; 
+	margin: 0 auto;
+	clear: both;
+}
+
+.sub-menu {
+	padding: 5% 0;
+}
+
+.sub-menu-name, .sub-menu-item a {
+	color: #FFF;
+	font-size: 1.2em;
+	font-weight: normal;
+	line-height: 1.7em;
+}
+
+.sub-menu-name {
+	font-size: 1.4em;
+	margin-top: 16px;
+	width: 40%;
+	margin: 0 auto;
+}
+.sub-menu-item {
+	margin-top: 8px;
+	width: 40%;
+	margin: 0 auto;
+}
 /* 
  *************************
  *    UTILITY CLASSES    *
@@ -159,21 +194,21 @@ overflow: hidden;
 /* CLEARFIX */
 .cf:after,
 .cf:before {
-  content: '';
-  display: table;
+	content: '';
+	display: table;
 }
 .cf:after {
-  clear: both;
+	clear: both;
 }
 .cf {
-  zoom: 1;
+	zoom: 1;
 }
 
 /* CENTER CONTENT BLOCKS */
 .center-block {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 /* 
@@ -182,57 +217,101 @@ overflow: hidden;
  *****************
  */
 
-  /* small row */
-  .col-sm-12 {
-    width: 100%
-
-  }
-
-  .hide-small {
-    display: none;
-  }
-
+/* small row */
+.col-sm-12 {
+	width: 100%
+}
 
 @media screen and (min-width: 40.5em) {
 
-  .hide-small {
-    display: inherit;
-  }
+	.nav {
+		width: 88%;
+		padding: 0;
+	}
 
-  .col-lg-2 {
-   width: 18.6%;
-  }
+	.nav-left {
+		float: left;
+		margin: 20px 0;
+	}
 
-  /* large quarter */
-  .col-lg-3 {
-    width: 23.2%;
-  }
+	.nav-right {
+		float: right;
+		margin: 40px 0 0 0;
+	}
 
-  /* large one-third */
-  .col-lg-4 {
-    width: 32.0%;
-  }
+	.nav-list-item {
+		display: inline;
+		padding: 0;
+	}
 
-  /* large half */
-  .col-lg-6 {
-    width: 49.2%;
-  }
+	.banner-text {
+		top: 11%;
+		left: 12%;
+		font-size: 2.65em;
+	}
 
-  /* large two-thirds */
-  .col-lg-8 {
-    width: 65.6%;
-  }
+	.content {
+		padding: 0 8%;
+	}
+	.news-feed {
+		padding: 0;
+	}
+	.feed-left img  {
+		float: right;
+		padding: 0 16%;
+		margin: 0 auto;
+	}
 
-  /* large three-quarters */
-  .col-lg-9 {
-    width: 74.6%;
-  }
+	.sub-menu {
+		display: inline-block;
+	}
+	.sub-menu-name, .sub-menu-item {
+		width: 100%;
+		margin: 0 auto;
+	}
 
-  .col-lg-10 {
-    width: 79.8%;
+	/**/
+	.col-lg-1 {
+	 width: 8.2%;
+	}
+	/* one-sixth */
+	.col-lg-2 {
+	 width: 16.4%;
+	}
+	/* large quarter */
+	.col-lg-3 {
+		width: 24.0%;
+	}
+	/* large one-third */
+	.col-lg-4 {
+		width: 32.0%;
+	}
+  .col-lg-5 {
+    width: 40.6%;
   }
-  .col-lg-12 {
-    width: 100%;
+	/* large half */
+	.col-lg-6 {
+		width: 49.2%;
+	}
+  .col-lg-7 {
+    width: 57.8%;
   }
+	/* large two-thirds */
+	.col-lg-8 {
+		width: 66.4%;
+	}
+	/* large three-quarters */
+	.col-lg-9 {
+		width: 74.0%;
+	}
+	.col-lg-10 {
+		width: 82.2%;
+	}
+  .col-lg-11 {
+    width: 91.0%;
+  }
+	.col-lg-12 {
+		width: 100%;
+	}
 
 }
