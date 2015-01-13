@@ -1,195 +1,140 @@
 body {
 	margin: 0;
 	font-family: 'helvetica neue', helvetica, arial sans;
-	font-weight: normal;
 }
 
-/*
- *****************
+/*****************
  *      NAV      *
- *****************
-*/
-
-.nav {
-	margin: 0 auto;
-	clear: both;
-	padding: 0 3%;
-}
-
-.nav-left {
-	margin: 0;
-}
+ *****************/
 
 .page-name {
 	font-size: 2.5em;
 	font-weight: normal;
 	margin: 0;
 }
-
-nav {
-	overflow: hidden;
-}
-
 .nav-right {
 	margin: 10px auto;
 }
-
 .nav-list-item {
 	display: inline;
 	padding: 0 4% 0 0;
 }
-
 ul {
 	padding: 0;
 }
-
 li {
 	list-style-type: none;
 }
-
 a {
-	text-decoration: none;
 	color: #000000;
+	text-decoration: none;
 }
 
-
-/*
- ******************
+/******************
  *     BANNER     *
- ******************
-*/
+ ******************/
 
 .banner {
 	position: relative;
 }
-
-.banner img {
+.banner-img {
 	width: 100%;
 }
-
 .banner-text {
-	position: absolute;
-	top: 5%;
-	left: 5%;
-	margin: 0 auto;
 	color: #FFF;
 	font-size: 1.3em;
+	left: 5%;
 	line-height: 1.25;
-}
-
-/*
- *******************
- * CONTENT SECTION *
- *******************
-*/
-
-.content {
 	margin: 0 auto;
-	clear: both;
-	padding: 0 3%;
-	position: relative;
+	position: absolute;
+	top: 5%;
 }
-.content-text {
-	text-align: center;
+
+/*********************
+ *  CONTENT SECTION  *
+ *********************/
+
+.content { 
 	margin: 20px 0 40px 0;
+	position: relative;
+	text-align: center;
 }
 h2 {
 	font-weight: normal;
 	margin: 0;
 }
 .thumbnail {
-	background-image: url(../img/grumpy1.jpg) ;
 	display: inline-block;
-	color: #FFF;
-	width: 225px;
-	height: 225px;
 	position: relative;
 }
-.thumbnail h3 {
-	background: rgba(0,0,0, 0.5);
-	position: absolute;
-	top: 4px;
-	left: 4px;
-	width: 96%;
-	height: 56%;
+.thumbnail-img {
+	width: 100%;
+}
+.thumbnail-text, 
+.thumbnail-text-2 {
+	background: rgba(0,0,0, 0.55);
+	color: #FFF;
+	left: 2%;
 	margin: auto;
-	padding-top: 90px;
-	/*padding-bottom: 90px;*/
+	padding: 42.5% 23%;
+	position: absolute;
+	top: 2%;
+}
+.thumbnail-text-2 {
+	padding: 37% 21.5%;
 }
 
-
-/*
- *******************
- *		NEWS FEED		 *
- *******************
-*/
+/***************
+ *  NEWS FEED  *
+ ***************/
 
 .news-feed {
-	margin: 0 auto;
-	clear: both;
-	padding: 0 3%;
-	position: relative;
-}
-
-.news-feed-group {
 	margin: 40px auto;
 }
-
-.feed-left {
-	position: relative;
+.feed-img {
 	clear: both;
 	float: left;
-}
-.feed-left img  {
+	position: relative;
 }
 .feed-right {
- overflow: hidden; 
+	overflow: hidden; 
 }
 
+/************
+ *  FOOTER  *
+ ************/
 
-/* 
- ****************
- *    FOOTER    *
- ****************
- */
-
-footer {
+.footer {
 	background-color: #414141;
 }
-
-.footer-menus {
-	width: 80%; 
-	margin: 0 auto;
-	clear: both;
+.center {
+	text-align: center;
 }
-
 .sub-menu {
+	font-size: 0.9em;
 	padding: 5% 0;
+	text-align: center;
 }
-
-.sub-menu-name, .sub-menu-item a {
+.sub-menu-name, 
+.sub-menu-item a {
 	color: #FFF;
 	font-size: 1.2em;
 	font-weight: normal;
 	line-height: 1.7em;
 }
-
 .sub-menu-name {
 	font-size: 1.4em;
-	margin-top: 16px;
+	margin: 16px auto 0;
 	width: 40%;
-	margin: 0 auto;
 }
 .sub-menu-item {
-	margin-top: 8px;
+	margin: 8px auto 0;
 	width: 40%;
-	margin: 0 auto;
 }
-/* 
- *************************
- *    UTILITY CLASSES    *
- *************************
- */
+
+/*********************
+ *  UTILITY CLASSES  *
+ *********************/
 
 /* CLEARFIX */
 .cf:after,
@@ -211,107 +156,137 @@ footer {
 	margin-right: auto;
 }
 
-/* 
- *****************
- *    COLUMNS    *
- *****************
- */
 
-/* small row */
+/****  BREAKPOINT RULES  ****/
+
+/****************************
+ *   SMALL SCREEN COLUMNS   *
+ ****************************/
+
+.container {
+	clear: both;
+	margin: 0 auto;
+	padding: 0 3%;
+}
+
 .col-sm-12 {
 	width: 100%
 }
 
+/****************************
+ *   LARGE SCREEN COLUMNS   *
+ ****************************/
+
 @media screen and (min-width: 40.5em) {
-
-	.nav {
-		width: 88%;
-		padding: 0;
-	}
-
+	/*   NAV BAR   */
 	.nav-left {
 		float: left;
 		margin: 20px 0;
 	}
-
+	.nav-links {
+		display: block!important;
+		height: auto!important;
+		overflow: visible!important;
+		padding-bottom: 0;
+	}
 	.nav-right {
-		float: right;
+		float: right!important;
 		margin: 40px 0 0 0;
 	}
-
+	.nav-right:last-child {
+		margin: 0 -15px 0 0;
+	}
 	.nav-list-item {
-		display: inline;
+		display: block;
+		float: left;
 		padding: 0;
+		position: relative;
+	}
+	.nav-list-item a {
+		display: block;
+		padding: 40px 15px 15px;
+		position: relative;
 	}
 
+	/* 	BANNER 	*/
 	.banner-text {
-		top: 11%;
-		left: 12%;
 		font-size: 2.65em;
+		left: 12%;
+		top: 11%;
 	}
 
-	.content {
-		padding: 0 8%;
+	/*  NEWS FEED  */
+	.feed-img {
+		left: 8%;
 	}
-	.news-feed {
-		padding: 0;
-	}
-	.feed-left img  {
+	.feed-right  {
 		float: right;
-		padding: 0 16%;
-		margin: 0 auto;
 	}
 
+	/*  FOOTER  */ 	
+	.footer-menu {
+		margin-left: 5%;
+	}
 	.sub-menu {
 		display: inline-block;
+		text-align: left;
 	}
-	.sub-menu-name, .sub-menu-item {
-		width: 100%;
+	.sub-menu-name,
+	.sub-menu-item {
 		margin: 0 auto;
+		width: 100%;
 	}
 
-	/**/
+	/* CONTAINER FOR COLUMNS */
+	.container {
+		padding: 0 10%;
+	}
+	
+	/*  COLUMNS  */
+
+	/* one-twelth */
 	.col-lg-1 {
-	 width: 8.2%;
+		width: 8.2%;
 	}
 	/* one-sixth */
 	.col-lg-2 {
-	 width: 16.4%;
+		width: 16.4%;
 	}
-	/* large quarter */
+	/* quarter */
 	.col-lg-3 {
 		width: 24.0%;
 	}
-	/* large one-third */
+	/* one-third */
 	.col-lg-4 {
 		width: 32.0%;
 	}
-  .col-lg-5 {
-    width: 40.6%;
-  }
-	/* large half */
+	.col-lg-5 {
+		width: 40.6%;
+	}
+	/* half */
 	.col-lg-6 {
 		width: 49.2%;
 	}
-  .col-lg-7 {
-    width: 57.8%;
-  }
-	/* large two-thirds */
+	.col-lg-7 {
+		width: 57.8%;
+	}
+	/* two-thirds */
 	.col-lg-8 {
 		width: 66.4%;
 	}
-	/* large three-quarters */
+	/* three-quarters */
 	.col-lg-9 {
 		width: 74.0%;
 	}
+	/* five-sixths */
 	.col-lg-10 {
 		width: 82.2%;
 	}
-  .col-lg-11 {
-    width: 91.0%;
-  }
+	.col-lg-11 {
+		width: 91.0%;
+	}
+	/* full row */
 	.col-lg-12 {
 		width: 100%;
 	}
-
-}
+ }
