@@ -177,7 +177,7 @@ h2 {
  *   LARGE SCREEN COLUMNS   *
  ****************************/
 
-@media screen and (min-width: 40.5em) {
+@media (min-width: 40em) {
 	/*   NAV BAR   */
 	.nav-left {
 		float: left;
@@ -217,7 +217,7 @@ h2 {
 
 	/*  NEWS FEED  */
 	.feed-img {
-		left: 8%;
+		/*left: 8%;*/
 	}
 	.feed-right  {
 		float: right;
@@ -239,7 +239,7 @@ h2 {
 
 	/* CONTAINER FOR COLUMNS */
 	.container {
-		padding: 0 10%;
+		/*padding: 0 10%;*/
 	}
 	
 	/*  COLUMNS  */
