@@ -1,3 +1,4 @@
 *.gem
 .sass-cache
 css/base.css.map
+.DS_Store
