@@ -1,17 +1,14 @@
 // @import 'reset';
 
 // Here we define the lower and upper bounds for each media size
-$small-range: (0em); /* 0, 640px */
-$medium-range: (40.063em); /* 641px, 1024px */
-$large-range: (64em); /* 1025px, 1440px */
-$xlarge-range: (90.063em); /* 1441px, 1920px */
+$small-range: (0em);					/* 0, 640px */
+$medium-range: (40.063em);		/* 641px, 1024px */
+$large-range: (64em);					/* 1025px, 1440px */
+$xlarge-range: (90.063em);		/* 1441px, 1920px */
 $xxlarge-range: (120.063em); /* 1921px */
 
 // Media Queries
-$screen: "only screen" !default;
-
-// $landscape: "#{$screen} and (orientation: landscape)" !default;
-// $portrait: "#{$screen} and (orientation: portrait)" !default;
+$screen: "only screen" !default; 
 
 $small-up: $screen !default;
 $small-only: "#{$screen} and (max-width: #{$medium-range})" !default;
@@ -27,6 +24,7 @@ $large-only: "#{$screen} and (min-width:#{$large-range}) and (max-width:#{$xlarg
 		clear: both;
 		margin: 0 auto;
 		padding: 0 3%;
+		font-weight: 300;
 	}
 
 	body {
@@ -150,8 +148,8 @@ $large-only: "#{$screen} and (min-width:#{$large-range}) and (max-width:#{$xlarg
 	.sub-menu-name, 
 	.sub-menu-item a {
 		color: #FFF;
-		font-size: 1.2em;
-		font-weight: normal;
+		font-size: 1.1em;
+		font-weight: 300;
 		line-height: 1.7em;
 	}
 	.sub-menu-name {
@@ -275,10 +273,17 @@ $large-only: "#{$screen} and (min-width:#{$large-range}) and (max-width:#{$xlarg
 		left: 12%;
 		top: 11%;
 	}
-	/*  FOOTER  */  
-	.footer-menu {
-		margin-left: 5%;
+
+	/*  NEWS FEED  */
+	.feed-img	img { 
+		max-width: 100%;
+		padding-right: 1em;
+		float: right;
 	}
+	.feed-right  {
+		float: left;
+	}
+	/*  FOOTER  */  
 	.sub-menu {
 		display: inline-block;
 		text-align: left;
@@ -287,7 +292,7 @@ $large-only: "#{$screen} and (min-width:#{$large-range}) and (max-width:#{$xlarg
 	.sub-menu-name,
 	.sub-menu-item {
 		margin: 0 auto;
-		width: 100%;
+		width: 64%;
 	}
 
 	/*  COLUMNS  */
@@ -334,15 +339,8 @@ $large-only: "#{$screen} and (min-width:#{$large-range}) and (max-width:#{$xlarg
 @media #{$large-up} { 
 	/* CONTAINER FOR COLUMNS */
 	.container {
+		max-width: 1068px;
 		padding: 0 10%;
-	}
-
-	/*  NEWS FEED  */
-	.feed-img {
-		left: 8%;
-	}
-	.feed-right  {
-		float: right;
 	}
 }
 
