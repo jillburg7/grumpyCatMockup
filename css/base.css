@@ -1,8 +1,6 @@
-/* 0, 640px */
-/* 641px, 1024px */
-/* 1025px, 1440px */
-/* 1441px, 1920px */
-/* 1921px */
+/* 640px */
+/* 1024px */
+/* 1440px */
 @media only screen {
   .container {
     clear: both;
@@ -200,7 +198,7 @@
   /* full row */
   .col-sm-12 {
     width: 100%; } }
-@media only screen and (min-width: 40.063em) {
+@media only screen and (min-width: 40em) {
   /*   NAV BAR   */
   .nav-left {
     float: left;

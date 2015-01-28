@@ -1,23 +1,19 @@
-// @import 'reset';
-
-// Here we define the lower and upper bounds for each media size
-$small-range: (0em);					/* 0, 640px */
-$medium-range: (40.063em);		/* 641px, 1024px */
-$large-range: (64em);					/* 1025px, 1440px */
-$xlarge-range: (90.063em);		/* 1441px, 1920px */
-$xxlarge-range: (120.063em); /* 1921px */
+// variable min-width media sizes
+$medium: (40em);	/* 640px */
+$large: (64em);		/* 1024px */
+$xlarge: (90em);	/* 1440px */
 
 // Media Queries
 $screen: "only screen" !default; 
 
 $small-up: $screen !default;
-$small-only: "#{$screen} and (max-width: #{$medium-range})" !default;
+$small-only: "#{$screen} and (max-width: #{$medium})" !default;
 
-$medium-up: "#{$screen} and (min-width:#{$medium-range})" !default;
-$medium-only: "#{$screen} and (min-width:#{$medium-range}) and (max-width:#{$large-range})" !default;
+$medium-up: "#{$screen} and (min-width:#{$medium})" !default;
+$medium-only: "#{$screen} and (min-width:#{$medium}) and (max-width:#{$large})" !default;
 
-$large-up: "#{$screen} and (min-width:#{$large-range})" !default;
-$large-only: "#{$screen} and (min-width:#{$large-range}) and (max-width:#{$xlarge-range})" !default;
+$large-up: "#{$screen} and (min-width:#{$large})" !default;
+$large-only: "#{$screen} and (min-width:#{$large}) and (max-width:#{$xlarge})" !default;
 
 @media #{$small-up} { 
 	.container {

@@ -1,6 +1,21 @@
 # grumpyCatMockup
 
-### Approach:
+### Approach
+
+
+-----
+##### UPDATE 1/28 (on [dev](https://github.com/jillburg7/grumpyCatMockup/tree/dev) branch only)
+
+The dev branch includes a lot of changes:
+
+- 3 breakpoints: small, medium, large
+- Sass preprocessing: variables defined for media queries (in scss/base.scss)
+	- Still need to work on making Sass handle more of the [somewhat] hardcode CSS values for things like layout percentages (column widths, padding, margin, etc)
+	- Need to modularize and organize scss files for a cleaner, more maintainable code & file structure
+- Cleaner code
+	- removed [some] unnecessary styling which caused issues with floats, weird spacing, etc.
+
+-----
 
 - I used 'mobile-first' principal to design webpage for smaller screens and to reuse as much code as possible when scaling up in device screen size
 - I would have preferred to include either off-canvas side menu or a drop-down menu for small screen navigation rather than display the navigation menu links on a new row below the page header, given the task was to implement only the HTML and CSS I tried to make the nav links as user-friendly as possible for this mockup.
